@@ -1,0 +1,29 @@
+body {
+
+}
+
+
+/* UTILIDADES */
+.float, .floatl {float:left}
+.floatR, .floatr {float:right}
+.clear {clear:both}
+
+.border{border: 1px solid gray;}
+
+.relative{position:relative;}
+.absolute{position:absolute;}
+
+.center, .Mcenter, .mcenter, .mCenter{margin-right: auto;margin-left: auto;}
+.Tcenter, .tCenter, .tcenter{text-align: center;}
+
+#wrapper {width:960px;}
+#Fwrapper {width:700px;}
+
+
+/* COLUMNAS */
+.col_1{width: 140px;}							.col_2{width: 280px;}
+.col_3{width: 420px;}							.col_4{width: 560px;}
+.col_5{width: 700px;}							.col_6{width: 840px;}
+.col_7{width: 980px;}							.col_8{width: 1120px;}
+
+/*  */
