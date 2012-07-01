@@ -3,7 +3,8 @@ C3PO
 
 A small PHP framework for the Internal Development of 3 Pixels Media and Camax 
 
-Copyright (c) <2012> <Jesus Camacaro @jcamax / Christian Romanelli @cromanelli >
+Copyright (c) <2012> 
+Developed by Jesus Camacaro @jcamax / Christian Romanelli @cromanelli 
 
 Permission is hereby granted, free of charge, to any
 person obtaining a copy of this software and associated
