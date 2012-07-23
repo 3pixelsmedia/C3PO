@@ -150,15 +150,15 @@ $db->db_select();
 
 */
 
-	function mailIt($correo,$urlmensaje){ //Revisar variables 
+	function mailIt($correo,$urlmensaje) { //Revisar variables 
 			require_once($path.'app/class.phpmailer.php');
 
-				public $mailFrom;
-				public $mailFromName;
-				public $mailUsername;
-				public $mailPassword;
-				public $mailHost;
-				public $asunto;
+				// public $mailFrom;
+				// public $mailFromName;
+				// public $mailUsername;
+				// public $mailPassword;
+				// public $mailHost;
+				// public $asunto;
 
 
 				$file = file_get_contents($urlmensaje);
