@@ -15,6 +15,9 @@ body {
 
 .center, .Mcenter, .mcenter, .mCenter{margin-right: auto;margin-left: auto;}
 .Tcenter, .tCenter, .tcenter{text-align: center;}
+.tleft, .Tleft, .tLeft {text-align: left;}
+.tright, .Tright, .tRight {text-align: right;}
+.tjustify, .Tjustify, .tJustify {text-align: justify}
 .margin {margin-left: 10px;margin-right:10px;}
 
 .wrapper {width:960px;} /* sustitui el nombre por una clase CR */
