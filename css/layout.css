@@ -1,0 +1,146 @@
+body {
+
+}
+
+
+/* UTILIDADES */
+.float, .floatl {float:left}
+.floatR, .floatr {float:right}
+.clear {clear:both}
+
+.border{border: 1px solid gray;}
+
+.relative{position:relative;}
+.absolute{position:absolute;}
+
+.center, .Mcenter, .mcenter, .mCenter{margin-right: auto;margin-left: auto;}
+.Tcenter, .tCenter, .tcenter{text-align: center;}
+.tleft, .Tleft, .tLeft {text-align: left;}
+.tright, .Tright, .tRight {text-align: right;}
+.tjustify, .Tjustify, .tJustify {text-align: justify}
+.margin {margin-left: 10px;margin-right:10px;}
+
+.wrapper {width:960px;} /* sustitui el nombre por una clase CR */
+.Fwrapper {width:700px;} /* sustitui el nombre por una clase CR */
+
+/* Grid  Basado en 960  Inspirado en Skeleton asi que cualquier problema yo no fui LOL */
+/* COLUMNAS */
+    .col_1{display:inline;width: 40px;}							    .col_2{display:inline;width: 100px;}
+    .col_3{display:inline;width: 160px;}							.col_4{display:inline;width: 220px;}
+    .col_5{display:inline;width: 280px;}							.col_6{display:inline;width: 340px;}
+    .col_7{display:inline;width: 400px;}							.col_8{display:inline;width: 460px;}
+    .col_9{display:inline;width: 520px;}							.col_10{display:inline;width: 580px;}
+    .col_11{display:inline;width: 640px;}							.col_12{display:inline;width: 700px;}
+    .col_13{display:inline;width: 760px;}							.col_14{display:inline;width: 820px;}
+    .col_15{display:inline;width: 880px;}							.col_16{display:inline;width: 940px;}
+
+    .wrapper .offset-1                   { padding-left: 60px;  }
+    .wrapper .offset-2                   { padding-left: 120px; }
+    .wrapper .offset-3                   { padding-left: 180px; }
+    .wrapper .offset-4                   { padding-left: 240px; }
+    .wrapper .offset-5                   { padding-left: 300px; }
+    .wrapper .offset-6                   { padding-left: 360px; }
+    .wrapper .offset-7                   { padding-left: 420px; }
+    .wrapper .offset-8                   { padding-left: 480px; }
+    .wrapper .offset-9                   { padding-left: 540px; }
+    .wrapper .offset-10                  { padding-left: 600px; }
+    .wrapper .offset-11                  { padding-left: 660px; }
+    .wrapper .offset-12                  { padding-left: 720px; }
+    .wrapper .offset-13                  { padding-left: 780px; }
+    .wrapper .offset-14                  { padding-left: 840px; }
+    .wrapper .offset-15                  { padding-left: 900px; }
+
+
+/*  */
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Diseño para un ancho de 768 px  */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.wrapper {width:768px;} /* sustitui el nombre por una clase CR */
+
+	.col_1{display:inline;width: 28px;}							.col_2{display:inline;width: 76px;}
+    .col_3{display:inline;width: 124px;}							.col_4{display:inline;width: 172px;}
+    .col_5{display:inline;width: 220px;}							.col_6{display:inline;width: 268px;}
+    .col_7{display:inline;width: 316px;}							.col_8{display:inline;width: 364px;}
+    .col_9{display:inline;width: 412px;}							.col_10{display:inline;width: 460px;}
+    .col_11{display:inline;width: 508px;}							.col_12{display:inline;width: 556px;}
+    .col_13{display:inline;width: 604px;}							.col_14{display:inline;width: 652px;}
+    .col_15{display:inline;width: 700px;}							.col_16{display:inline;width: 768px;}
+
+    .wrapper .offset-1                   { padding-left: 60px;  }
+    .wrapper .offset-2                   { padding-left: 120px; }
+    .wrapper .offset-3                   { padding-left: 180px; }
+    .wrapper .offset-4                   { padding-left: 240px; }
+    .wrapper .offset-5                   { padding-left: 300px; }
+    .wrapper .offset-6                   { padding-left: 360px; }
+    .wrapper .offset-7                   { padding-left: 420px; }
+    .wrapper .offset-8                   { padding-left: 480px; }
+    .wrapper .offset-9                   { padding-left: 540px; }
+    .wrapper .offset-10                  { padding-left: 600px; }
+    .wrapper .offset-11                  { padding-left: 660px; }
+    .wrapper .offset-12                  { padding-left: 720px; }
+    .wrapper .offset-13                  { padding-left: 780px; }
+    .wrapper .offset-14                  { padding-left: 840px; }
+    .wrapper .offset-15                  { padding-left: 900px; }
+
+}
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Diseño para un ancho de 320px */
+
+    @media only screen and (max-width: 767px) {
+        .wrapper {width:300px;}
+
+        .col_1,                            .col_2,
+        .col_3,                           .col_4,
+        .col_5,                           .col_6,
+        .col_7,                           .col_8,
+        .col_9,                          .col_10,
+        .col_11,                         .col_12,
+        .col_13,                          .col_14,
+        .col_15,                          .col_16 {display:inline;width:300px;}
+
+        .wrapper .offset-1                   { padding-left: 48px;  }
+        .wrapper .offset-2                   { padding-left: 96px; }
+        .wrapper .offset-3                   { padding-left: 144px; }
+        .wrapper .offset-4                   { padding-left: 192px; }
+        .wrapper .offset-5                   { padding-left: 240px; }
+        .wrapper .offset-6                   { padding-left: 288px; }
+        .wrapper .offset-7                   { padding-left: 336px; }
+        .wrapper .offset-8                   { padding-left: 384px; }
+        .wrapper .offset-9                   { padding-left: 432px; }
+        .wrapper .offset-10                  { padding-left: 480px; }
+        .wrapper .offset-11                  { padding-left: 528px; }
+        .wrapper .offset-12                  { padding-left: 576px; }
+        .wrapper .offset-13                  { padding-left: 624px; }
+        .wrapper .offset-14                  { padding-left: 672px; }
+        .wrapper .offset-15                  { padding-left: 720px; }
+        }
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Diseño para un ancho de 480px */
+
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .wrapper {width:420px;}
+
+        .col_1,                            .col_2,
+        .col_3,                           .col_4,
+        .col_5,                           .col_6,
+        .col_7,                           .col_8,
+        .col_9,                          .col_10,
+        .col_11,                         .col_12,
+        .col_13,                          .col_14,
+        .col_15,                          .col_16 {display:inline;width:420px;}
+
+
+
+        }
+
