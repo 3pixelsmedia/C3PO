@@ -1,7 +1,7 @@
 C3PO
 ====
 
-A small PHP framework for the Internal Development of 3 Pixels Media and Camax 
+A small PHP framework for the Internal Development of 3 Pixels Media and Camax Soluciones Informáticas
 
 Copyright (c) <2012> 
 Developed by Jesus Camacaro @jcamax / Christian Romanelli @cromanelli 
