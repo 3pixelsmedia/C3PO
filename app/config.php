@@ -11,7 +11,7 @@ $webpath = ""; // webpath a la carpeta del app
 
 //Datos de DB
 
-$useDB = "" // 0 no se usa la DB , 1 se usa la DB 
+$useDB = ""; // 0 no se usa la DB , 1 se usa la DB 
 $dbhost = ""; // Host del DB
 $dbuser = ""; // user del DB
 $dbpass = ""; // password del DB 
