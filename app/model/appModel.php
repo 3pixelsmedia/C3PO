@@ -8,7 +8,30 @@
 
 
 /* Clase encargada de conectar con Facebook  */
+class Twitter {
+	function init() {
+			Global $twitterApp;
+	Global $twitterSecret;
+	Global $path;
+	require_once($path.'app/twitter/tmhOAuth.php');
+	$twitter = new tmhOAuth(array(
+		'consumer_key'=> $twitterApp,
+		'consumer_secret' => $twitterSecret,
+		'user_token' => '23200891-QPmTYJYimsUj0vYBDA6Y5olms1Uy4m3jNfmLGteI', 
+		'user_secret' => 'kXH6SzwtuR3QUpuulp5Mvxk8aL7tQLIPDcNp6aMusRI'
+		));
+	return $twitter;
+	}
 
+	function tuittear($msg) {
+		$tw = $this->init();
+		$tw->request('POST',
+			$tw->url('1/statuses/update'),
+			array('status'=>$msg));
+		return $tw->response['code'];
+	}
+
+}
 
 class Face{
 	function init() {
