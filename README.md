@@ -1,7 +1,8 @@
-C3PO
+C3PO (Not related in any way with LucasFilm LTD fictional Character)
 ====
 
 A small PHP framework for the Internal Development of 3 Pixels Media and Camax Soluciones Informáticas
+
 
 Copyright (c) <2012> 
 Developed by Jesus Camacaro @jcamax / Christian Romanelli @cromanelli 
@@ -27,3 +28,11 @@ OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
 OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+--------------------------------------
+External software used by this Framework.
+
+JQuery by Jquery Foundation 
+Modernizr by Faruk Ateş , Paul Irish, Alex Sexton ,Ryan Seddon, Alexander Farkas
+
