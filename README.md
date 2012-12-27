@@ -34,5 +34,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 External software used by this Framework.
 
 JQuery by Jquery Foundation 
+
 Modernizr by Faruk Ateş , Paul Irish, Alex Sexton ,Ryan Seddon, Alexander Farkas
+
+PHP Active Record by Clay Van Schalkwijk ,Jacques Fuentes,  Kien La 
 
