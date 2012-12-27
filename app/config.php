@@ -2,7 +2,7 @@
 
 // configurar modo production o developer 
 ini_set('display_errors','1');
-
+date_default_timezone_set('America/Caracas');
 
 
 $title = "Sin Titulo"; // titulo del app o web site. 
