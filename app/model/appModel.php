@@ -17,8 +17,8 @@ class Twitter {
 	$twitter = new tmhOAuth(array(
 		'consumer_key'=> $twitterApp,
 		'consumer_secret' => $twitterSecret,
-		'user_token' => '23200891-QPmTYJYimsUj0vYBDA6Y5olms1Uy4m3jNfmLGteI', 
-		'user_secret' => 'kXH6SzwtuR3QUpuulp5Mvxk8aL7tQLIPDcNp6aMusRI'
+		'user_token' => $usertoken, 
+		'user_secret' => $usersecret
 		));
 	return $twitter;
 	}
@@ -118,7 +118,29 @@ class Face{
 }
 
 class DbConn{
-		
+// Modificacion a PDO. 
+
+	function db_connect($dbname) {
+			Global $dbhost;
+		 	Global $dbuser;
+		 	Global $dbpass;
+
+		 	try {
+		 		$db = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF-8",$user,$pass); 
+		 	} catch (PDOException $e) {
+		 		echo $e->getMessage();
+		 	}
+	return $db;
+	}
+
+
+	function close($db) {
+		global $db;
+		$db = null;
+	}
+
+
+/*		
 		 function db_connect(){ 
 		 	Global $dbhost;
 		 	Global $dbuser;
@@ -158,9 +180,12 @@ class DbConn{
 		 function close(){ 
 		 global $connect; 
 		 @mysql_close($connect); 
-		 } 
+		 } */
 		
-} /*Uso de esta clase dbconn
+}
+
+
+ /*Uso de esta clase dbconn
 
 Llamar clase
 
