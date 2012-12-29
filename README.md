@@ -39,3 +39,5 @@ Modernizr by Faruk Ateş , Paul Irish, Alex Sexton ,Ryan Seddon, Alexander Farka
 
 PHP Active Record by Clay Van Schalkwijk ,Jacques Fuentes,  Kien La 
 
+Angular JS by Google 
+
