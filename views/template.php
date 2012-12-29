@@ -2,7 +2,7 @@
 include ('app/config.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
 <?php include('inc/head.php'); ?>
 </head>
