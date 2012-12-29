@@ -29,7 +29,7 @@ if($mod == null){
 	exit;
 }
 if ($useDB =="1") {
-	$db->close(); 
+	$d->close(); 
 }
 	
 ?>
