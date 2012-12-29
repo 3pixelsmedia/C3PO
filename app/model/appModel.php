@@ -121,24 +121,48 @@ class Face{
 // Modificacion a PDO. 
 
 class DbConn {
-	function db_connect() {
+	function db_connect($dbType) {
 			Global $dbhost;
 		 	Global $dbuser;
 		 	Global $dbpass;
 		 	global $dbname;
-		 	echo "DB Connect <br>";
-		 	try {
-		 		$db = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF-8",
-		 			$dbuser,
-		 			$dbpass,
-		 			array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
-		 	} catch (PDOException $e) {
-		 		echo $e->getMessage();
+		 	switch ($dbType) {
+		 		case 'PDO':
+		 			try {
+		 				$db = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF-8",
+		 					$dbuser,
+		 					$dbpass,
+		 					array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
+		 			} catch (PDOException $e) {
+		 				echo $e->getMessage();
 
+		 			}
+		 			break;
+		 		case 'mysql':
+		 			 $connect = @mysql_connect($dbhost,$dbuser,$dbpass); 
+		 			 $select = @mysql_select_db($dbname);
+		 			 if(!$connect){ 
+		 			 @mysql_close($connect); 
+		 			 @mysql_query("SET names 'UTF8'"); 
+		 			 @mysql_query("SET charset 'UTF8'"); 
+		 			 @mysql_query("SET character_set_client = UTF8"); 
+		 			 @mysql_query("SET character_set_connection = UTF8"); 
+		 			 @mysql_query("SET character_set_database = UTF8"); 
+		 			 @mysql_query("SET character_set_results = UTF8"); 
+		 			 @mysql_query("SET character_set_server = UTF8"); 
+		 			 die ("<h1><font color='#000000'><center>MySQL DataBase No se pudo<font color='#FF0000'style='text-decoration:blink;'> conectar !</font></center></font></h1>"); 
+		 			 return false; 
+		 			 } 
+		 			 return true; 
+
+
+		 			break;
+		 		default:
+		 			return json_encode(array("Error"=>"Debes seleccionar metodo de Conexión"));
+		 			break;
 		 	}
-		 	if (!$db) {
-		 		echo "not DB";
-		 	}
+		 	
+
 	return $db;
 	}
 
@@ -155,21 +179,7 @@ class DbConn {
 		 	Global $dbuser;
 		 	Global $dbpass;
 
-		 $connect = @mysql_connect($dbhost,$dbuser,$dbpass); 
-		 if(!$connect){ 
-		 @mysql_close($connect); 
-		 @mysql_query("SET names 'UTF8'"); 
-		 @mysql_query("SET charset 'UTF8'"); 
-		 @mysql_query("SET character_set_client = UTF8"); 
-		 @mysql_query("SET character_set_connection = UTF8"); 
-		 @mysql_query("SET character_set_database = UTF8"); 
-		 @mysql_query("SET character_set_results = UTF8"); 
-		 @mysql_query("SET character_set_server = UTF8"); 
-		 die ("<h1><font color='#000000'><center>MySQL DataBase No se pudo<font color='#FF0000'style='text-decoration:blink;'> conectar !</font></center></font></h1>"); 
-		 return false; 
-		 } 
-		 return true; 
-		} 
+		 
 
 
 		 function db_select($database){ 

@@ -13,7 +13,7 @@ if(isset($_GET['l'])){
 }
 if ($useDB =="1") {
 		$d = new DbConn;
-		$db = $d->db_connect(); 
+		$db = $d->db_connect($dbType); 
 
 	//$db->db_select($database); 
 }
