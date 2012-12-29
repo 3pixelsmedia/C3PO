@@ -15,7 +15,7 @@ $useDB = ""; // 0 no se usa la DB , 1 se usa la DB
 $dbhost = ""; // Host del DB
 $dbuser = ""; // user del DB
 $dbpass = ""; // password del DB 
-$database = ""; // DB al cual nos vamos a conectar. 
+$dbname = ""; // DB al cual nos vamos a conectar. 
 
 // VARIABLES
 	// FACEBOOK
@@ -33,8 +33,13 @@ $database = ""; // DB al cual nos vamos a conectar.
 	$mailPassword = "c3pothebest"; // NO TOCAR Password server mail 
 	$mailHost = "c3po.cmxhost.com"; // NO TOCAR Host  server mail 
 	$asunto = ""; // Asunto del Mail 
-//Twitter app
+	
+	//Twitter app
+	
 	$twitterApp = "";
 	$twitterSecret = "";
+	$twUsertoken = "";
+	$twUsersecret = "";
+
 
 ?>

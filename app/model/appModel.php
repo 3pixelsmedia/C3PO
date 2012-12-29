@@ -10,16 +10,16 @@
 /* Clase encargada de conectar con Facebook  */
 class Twitter {
 	function init() {
-			Global $twitterApp;
-	Global $twitterSecret;
-	Global $path;
-	require_once($path.'app/twitter/tmhOAuth.php');
-	$twitter = new tmhOAuth(array(
-		'consumer_key'=> $twitterApp,
-		'consumer_secret' => $twitterSecret,
-		'user_token' => $usertoken, 
-		'user_secret' => $usersecret
-		));
+		Global $twitterApp;
+		Global $twitterSecret;
+		Global $path;
+		require_once($path.'app/twitter/tmhOAuth.php');
+		$twitter = new tmhOAuth(array(
+			'consumer_key'=> $twitterApp,
+			'consumer_secret' => $twitterSecret,
+			'user_token' => $twUsertoken, 
+			'user_secret' => $twUsersecret
+			));
 	return $twitter;
 	}
 
@@ -117,18 +117,27 @@ class Face{
 	
 }
 
-class DbConn{
+
 // Modificacion a PDO. 
 
-	function db_connect($dbname) {
+class DbConn {
+	function db_connect() {
 			Global $dbhost;
 		 	Global $dbuser;
 		 	Global $dbpass;
-
+		 	global $dbname;
+		 	echo "DB Connect <br>";
 		 	try {
-		 		$db = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF-8",$user,$pass); 
+		 		$db = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF-8",
+		 			$dbuser,
+		 			$dbpass,
+		 			array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
 		 	} catch (PDOException $e) {
 		 		echo $e->getMessage();
+
+		 	}
+		 	if (!$db) {
+		 		echo "not DB";
 		 	}
 	return $db;
 	}
@@ -138,7 +147,7 @@ class DbConn{
 		global $db;
 		$db = null;
 	}
-
+}
 
 /*		
 		 function db_connect(){ 
@@ -182,7 +191,7 @@ class DbConn{
 		 @mysql_close($connect); 
 		 } */
 		
-}
+
 
 
  /*Uso de esta clase dbconn
@@ -232,6 +241,6 @@ class Nombre_Clase {
 	
 }
 include ($path.'app/class.phpmailer.php');
-include ('devCama.php');
 include ('devRoma.php');
+include ('devCama.php');
 ?>

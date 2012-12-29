@@ -12,11 +12,11 @@ if(isset($_GET['l'])){
 
 }
 if ($useDB =="1") {
-	$db = new DbConn(); 
-	$db->db_connect(); 
-	$db->db_select($database); 
-}
+		$d = new DbConn;
+		$db = $d->db_connect(); 
 
+	//$db->db_select($database); 
+}
 
 if($mod == null){
 
