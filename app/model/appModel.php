@@ -137,6 +137,7 @@ class DbConn {
 		 				echo $e->getMessage();
 
 		 			}
+		 			return $db;
 		 			break;
 		 		case 'mysql':
 		 			 $connect = @mysql_connect($dbhost,$dbuser,$dbpass); 
@@ -157,13 +158,28 @@ class DbConn {
 
 
 		 			break;
+		 		case 'php-ar':
+		 			include_once('app/php-ar/ActiveRecord.php');
+		 			
+		 			ActiveRecord\Config::initialize(function($cfg) {
+		 				Global $dbhost;
+		 				Global $dbuser;
+		 				Global $dbpass;
+		 				global $dbname;
+		 				$conn = "mysql://$dbuser:$dbpass@$dbhost/$dbname";
+		 			 	$cfg->set_model_directory('app/dbmodels');
+		 				$cfg->set_connections(array(
+		 					"development" => $conn));
+		 			});
+
+		 			break;
 		 		default:
 		 			return json_encode(array("Error"=>"Debes seleccionar metodo de Conexión"));
 		 			break;
 		 	}
 		 	
 
-	return $db;
+	
 	}
 
 

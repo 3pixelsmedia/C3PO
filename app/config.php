@@ -11,12 +11,12 @@ $webpath = ""; // webpath a la carpeta del app
 
 //Datos de DB
 
-$useDB = "0"; // 0 no se usa la DB , 1 se usa la DB 
-$dbType = ""; // PDO o mysql
-$dbhost = ""; // Host del DB
-$dbuser = ""; // user del DB
-$dbpass = ""; // password del DB 
-$dbname = ""; // DB al cual nos vamos a conectar. 
+$useDB = "1"; // 0 no se usa la DB , 1 se usa la DB 
+$dbType = "php-ar"; // PDO, php-ar o mysql
+$dbhost = "localhost"; // Host del DB
+$dbuser = "root"; // user del DB
+$dbpass = "caterina220606"; // password del DB 
+$dbname = "viaappia"; // DB al cual nos vamos a conectar. 
 
 // VARIABLES
 	// FACEBOOK
