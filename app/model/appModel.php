@@ -171,7 +171,16 @@ class DbConn {
 		 				$cfg->set_connections(array(
 		 					"development" => $conn));
 		 			});
-
+		 			function toJson($array) {
+		 				$json = "[";
+		 				foreach ($array as $r) {
+		 					$r1= json_encode($r->attributes());
+		 					$json .= $r1 .",";
+		 				}
+		 				$json .= "]";
+		 				$json = str_replace("},]", "}]", $json);
+		 				return $json;
+		 			}
 		 			break;
 		 		default:
 		 			return json_encode(array("Error"=>"Debes seleccionar metodo de Conexión"));
