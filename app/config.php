@@ -5,7 +5,8 @@ ini_set('display_errors','1');
 date_default_timezone_set('America/Caracas');
 
 
-$title = "Sin Titulo"; // titulo del app o web site. 
+$title = "Sin Titulo"; // titulo del app o web site.
+$favicon = ""; //URL donde se encuentra el icono favicon.
 $path = "";	// path absoluto a la carpeta del app  
 $webpath = ""; // webpath a la carpeta del app
 
