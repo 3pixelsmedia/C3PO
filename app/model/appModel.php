@@ -129,7 +129,7 @@ class DbConn {
 		 	switch ($dbType) {
 		 		case 'PDO':
 		 			try {
-		 				$db = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF-8",
+		 				$db = new PDO("mysql:host=$dbhost;dbname=$dbname;charset=UTF8",
 		 					$dbuser,
 		 					$dbpass,
 		 					array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
